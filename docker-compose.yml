@@ -1,0 +1,12 @@
+version: "2"
+services:
+  pyapp:
+    image:  tesseract
+    build:  ./
+    tty:  true
+    volumes:
+      - "./static:/root/static"
+      - "./test:/root/test"
+      - "./app:/root/app"
+    ports:
+      - "8888:8888"
